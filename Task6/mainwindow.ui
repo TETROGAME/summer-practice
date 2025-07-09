@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>621</width>
+    <height>487</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QGraphicsView" name="canvas"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>621</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="fileMenu">
+    <property name="title">
+     <string>Файл</string>
+    </property>
+    <addaction name="saveAction"/>
+    <addaction name="openAction"/>
+   </widget>
+   <widget class="QMenu" name="figureMenu">
+    <property name="title">
+     <string>Фигура</string>
+    </property>
+    <addaction name="rectangleAction"/>
+    <addaction name="ellipseAction"/>
+    <addaction name="rhombusAction"/>
+   </widget>
+   <widget class="QMenu" name="colorMenu">
+    <property name="title">
+     <string>Цвет</string>
+    </property>
+    <addaction name="outlineColorAction"/>
+    <addaction name="fillingColorAction"/>
+   </widget>
+   <widget class="QMenu" name="fillingStyleMenu">
+    <property name="title">
+     <string>Стиль заливки</string>
+    </property>
+    <addaction name="noFillingAction"/>
+    <addaction name="onlyFillingAction"/>
+    <addaction name="outlineWithFillingAction"/>
+   </widget>
+   <addaction name="fileMenu"/>
+   <addaction name="figureMenu"/>
+   <addaction name="colorMenu"/>
+   <addaction name="fillingStyleMenu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="action">
+   <property name="text">
+    <string>Фигура</string>
+   </property>
+  </action>
+  <action name="saveAction">
+   <property name="text">
+    <string>Сохранить</string>
+   </property>
+  </action>
+  <action name="openAction">
+   <property name="text">
+    <string>Открыть</string>
+   </property>
+  </action>
+  <action name="rectangleAction">
+   <property name="text">
+    <string>Прямоугольник</string>
+   </property>
+  </action>
+  <action name="ellipseAction">
+   <property name="text">
+    <string>Эллипс</string>
+   </property>
+  </action>
+  <action name="rhombusAction">
+   <property name="text">
+    <string>Ромб</string>
+   </property>
+  </action>
+  <action name="outlineColorAction">
+   <property name="text">
+    <string>Цвет контура</string>
+   </property>
+  </action>
+  <action name="fillingColorAction">
+   <property name="text">
+    <string>Цвет заливки</string>
+   </property>
+  </action>
+  <action name="noFillingAction">
+   <property name="text">
+    <string>Без заливки</string>
+   </property>
+  </action>
+  <action name="onlyFillingAction">
+   <property name="text">
+    <string>Только заливка</string>
+   </property>
+  </action>
+  <action name="outlineWithFillingAction">
+   <property name="text">
+    <string>Контур и заливка</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
