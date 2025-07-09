@@ -9,27 +9,18 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    List_functions.cpp \
-    Queue_functions.cpp \
-    Stack_functions.cpp \
-    listtaskwindow.cpp \
     main.cpp \
     mainwindow.cpp \
-    queuetaskwindow.cpp \
-    stacktaskwindow.cpp
+    Stack_functions.cpp \
+    Queue_functions.cpp \
+    List_functions.cpp
 
 HEADERS += \
-    Stack_Queue_List_header.h \
-    listtaskwindow.h \
     mainwindow.h \
-    queuetaskwindow.h \
-    stacktaskwindow.h
+    Stack_Queue_List_header.h
 
 FORMS += \
-    listtaskwindow.ui \
-    mainwindow.ui \
-    queuetaskwindow.ui \
-    stacktaskwindow.ui
+    mainwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
