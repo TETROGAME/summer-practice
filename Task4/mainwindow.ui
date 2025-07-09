@@ -1,0 +1,841 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Структуры данных</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="stackPage">
+       <layout class="QVBoxLayout" name="verticalLayoutStack">
+        <item>
+         <widget class="QTabWidget" name="stackTabWidget">
+          <property name="currentIndex">
+           <number>1</number>
+          </property>
+          <widget class="QWidget" name="firstTaskTab">
+           <attribute name="title">
+            <string>Задание 1</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayoutFirstTask">
+            <item>
+             <widget class="QLabel" name="conditionFirstTaskLabel">
+              <property name="text">
+               <string>Записать числа в стек, просматривая стек, поменять у каждой тройки: второй увеличить на первый, третий на второй не измененный. Результат записать в стек и вывести</string>
+              </property>
+              <property name="wordWrap">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QTabWidget" name="inputChangeTabWidget">
+              <property name="currentIndex">
+               <number>0</number>
+              </property>
+              <widget class="QWidget" name="manualChangeInputTab">
+               <attribute name="title">
+                <string>Вручную</string>
+               </attribute>
+               <layout class="QVBoxLayout" name="verticalLayoutManualChange">
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayoutManual">
+                  <item>
+                   <widget class="QLineEdit" name="inputManualLineEdit">
+                    <property name="placeholderText">
+                     <string>Введите ряд цифр через пробел (2 3 67 12 7 214)</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="inputManualPushButton">
+                    <property name="text">
+                     <string>Ввести</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <widget class="QPlainTextEdit" name="outputManualPlainTextEdit">
+                  <property name="readOnly">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="manualClearOutputPushButton">
+                  <property name="text">
+                   <string>Очистить вывод</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+              <widget class="QWidget" name="fileChangeInputTab">
+               <attribute name="title">
+                <string>Из файла</string>
+               </attribute>
+               <layout class="QVBoxLayout" name="verticalLayoutFileChange">
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayoutFile">
+                  <item>
+                   <widget class="QLineEdit" name="filenameLineEdit">
+                    <property name="placeholderText">
+                     <string>Введите название файла (example.txt)</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="inputFilePushButton">
+                    <property name="text">
+                     <string>Ввести</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <widget class="QPlainTextEdit" name="inputFileLineEdit">
+                  <property name="readOnly">
+                   <bool>true</bool>
+                  </property>
+                  <property name="placeholderText">
+                   <string>Тут появится содержимое входного файла</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPlainTextEdit" name="outputFilePlainTextEdit">
+                  <property name="readOnly">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="fileClearOutputPushButton">
+                  <property name="text">
+                   <string>Очистить вывод</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="secondTaskTab">
+           <attribute name="title">
+            <string>Задание 2</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayoutSecondTask">
+            <item>
+             <widget class="QLabel" name="conditionSecondTaskLabel">
+              <property name="text">
+               <string>Преобразовать математическое выражение в префиксную (польскую) форму используя свой стек</string>
+              </property>
+              <property name="wordWrap">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QTabWidget" name="polishTabWidget">
+              <property name="currentIndex">
+               <number>0</number>
+              </property>
+              <widget class="QWidget" name="inputPolishManualTab">
+               <attribute name="title">
+                <string>Вручную</string>
+               </attribute>
+               <layout class="QVBoxLayout" name="verticalLayoutPolishManual">
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayoutPolishManual">
+                  <item>
+                   <widget class="QLineEdit" name="inputPolishManualLineEdit">
+                    <property name="placeholderText">
+                     <string>Введите математическое выражение ( 0-9, +-/*() )</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="inputPolishManualPushButton">
+                    <property name="text">
+                     <string>Ввести</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <widget class="QPlainTextEdit" name="outputPolishManualPlainTextEdit">
+                  <property name="readOnly">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="clearOutputPolishManualPushButton">
+                  <property name="text">
+                   <string>Очистить вывод</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+              <widget class="QWidget" name="inputPolishFileTab">
+               <attribute name="title">
+                <string>Из файла</string>
+               </attribute>
+               <layout class="QVBoxLayout" name="verticalLayoutPolishFile">
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayoutPolishFile">
+                  <item>
+                   <widget class="QLineEdit" name="inputFilenamePolishFileLineEdit">
+                    <property name="placeholderText">
+                     <string>Введите название файла (example.txt)</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="inputPolishFilePushButton">
+                    <property name="text">
+                     <string>Ввести</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <widget class="QPlainTextEdit" name="inputPolishFileLineEdit">
+                  <property name="readOnly">
+                   <bool>true</bool>
+                  </property>
+                  <property name="placeholderText">
+                   <string>Тут появится содержимое входного файла</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPlainTextEdit" name="outputPolishFilePlainTextEdit">
+                  <property name="readOnly">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="clearOutputPolishFilePushButton">
+                  <property name="text">
+                   <string>Очистить вывод</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="listPage">
+       <layout class="QVBoxLayout" name="verticalLayoutList">
+        <item>
+         <widget class="QTabWidget" name="listTabWidget">
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <widget class="QWidget" name="firstTaskListTab">
+           <attribute name="title">
+            <string>Задание 1</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayoutFirstTaskList">
+            <item>
+             <widget class="QLabel" name="firstTaskListLabel">
+              <property name="text">
+               <string>Вокруг считающего стоит N человек, из которых выделен первый, а остальные занумерованы  по часовой стрелке числами от 2 до N. Считающий, начиная с кого-то, ведет счет до M. Человек, на котором остановился счет, выходит из круга. Счет продолжается со следующего человека и так до тех пор, пока не останется один человек. Определить номер оставшегося человека, если известно M и то, что счет начинался с первого человека</string>
+              </property>
+              <property name="wordWrap">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QTabWidget" name="josephusTabWidget">
+              <property name="currentIndex">
+               <number>0</number>
+              </property>
+              <widget class="QWidget" name="josephusManualTab">
+               <attribute name="title">
+                <string>Вручную</string>
+               </attribute>
+               <layout class="QHBoxLayout" name="horizontalLayoutJosephusManual">
+                <item>
+                 <layout class="QVBoxLayout" name="verticalLayoutJosephusManualInput">
+                  <item>
+                   <widget class="QLineEdit" name="inputManualJosephusLineEdit">
+                    <property name="placeholderText">
+                     <string>Введите фамилии людей через пробел</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <layout class="QHBoxLayout" name="horizontalLayoutJosephusSpinBox">
+                    <item>
+                     <widget class="QLabel" name="josephusManualLabel">
+                      <property name="text">
+                       <string>Шаг считающего</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QSpinBox" name="josephusManualSpinBox"/>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <spacer name="verticalSpacerJosephus">
+                    <property name="orientation">
+                     <enum>Qt::Orientation::Vertical</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>20</width>
+                      <height>40</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="inputJosephusManualPushButton">
+                    <property name="text">
+                     <string>Ввести</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QVBoxLayout" name="verticalLayoutJosephusManualOutput">
+                  <item>
+                   <widget class="QPlainTextEdit" name="outputJosephusManualPlainTextEdit">
+                    <property name="readOnly">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="clearJosephusManualPushButton">
+                    <property name="text">
+                     <string>Очистить вывод</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </widget>
+              <widget class="QWidget" name="josephusFileTab">
+               <attribute name="title">
+                <string>Из файла</string>
+               </attribute>
+               <layout class="QHBoxLayout" name="horizontalLayoutJosephusFile">
+                <item>
+                 <layout class="QVBoxLayout" name="verticalLayoutJosephusFileInput">
+                  <item>
+                   <widget class="QLineEdit" name="inputFileJosephusLineEdit">
+                    <property name="placeholderText">
+                     <string>Введите название файла</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <layout class="QHBoxLayout" name="horizontalLayoutJosephusFileSpinBox">
+                    <item>
+                     <widget class="QLabel" name="josephusFileLabel">
+                      <property name="text">
+                       <string>Шаг считающего</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QSpinBox" name="josephusFileSpinBox"/>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <spacer name="verticalSpacerJosephusFile">
+                    <property name="orientation">
+                     <enum>Qt::Orientation::Vertical</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>20</width>
+                      <height>40</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="inputJosephusFilePushButton">
+                    <property name="text">
+                     <string>Ввести</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QVBoxLayout" name="verticalLayoutJosephusFileOutput">
+                  <item>
+                   <widget class="QPlainTextEdit" name="outputJosephusFilePlainTextEdit">
+                    <property name="readOnly">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="clearJosephusFilePushButton">
+                    <property name="text">
+                     <string>Очистить вывод</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </widget>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="secondTaskListTab">
+           <attribute name="title">
+            <string>Задание 2</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayoutSecondTaskList">
+            <item>
+             <widget class="QLabel" name="secondTaskListLabel">
+              <property name="text">
+               <string>Pадан набор целых чисел. Записать их в память используя свой список. Просматривая элементы списка по тройкам, поменять крайние, результат записать в новый список</string>
+              </property>
+              <property name="wordWrap">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QTabWidget" name="swapTabWidget">
+              <property name="currentIndex">
+               <number>0</number>
+              </property>
+              <widget class="QWidget" name="swapManualTab">
+               <attribute name="title">
+                <string>Вручную</string>
+               </attribute>
+               <layout class="QVBoxLayout" name="verticalLayoutSwapManual">
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayoutSwapManual">
+                  <item>
+                   <widget class="QLineEdit" name="inputSwapManualLineEdit">
+                    <property name="placeholderText">
+                     <string>Введите числа через пробел</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="inputSwapManualPushButton">
+                    <property name="text">
+                     <string>Ввести</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <widget class="QPlainTextEdit" name="outputSwapManualPlainTextEdit"/>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="cleanSwapManualPushButton">
+                  <property name="text">
+                   <string>Очистить вывод</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+              <widget class="QWidget" name="swapFileTab">
+               <attribute name="title">
+                <string>Из файла</string>
+               </attribute>
+               <layout class="QVBoxLayout" name="verticalLayoutSwapFile">
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayoutSwapFile">
+                  <item>
+                   <widget class="QLineEdit" name="inputSwapFileLineEdit">
+                    <property name="placeholderText">
+                     <string>Введите название файла</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="inputSwapFilePushButton">
+                    <property name="text">
+                     <string>Ввести</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayoutSwapFileOutput">
+                  <item>
+                   <widget class="QPlainTextEdit" name="inputSwapFilePlainTextEdit">
+                    <property name="placeholderText">
+                     <string>Тут появится информация из входного файла</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <layout class="QVBoxLayout" name="verticalLayoutSwapFileOutput">
+                    <item>
+                     <widget class="QPlainTextEdit" name="outputSwapFilePlainTextEdit"/>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="clearSwapFilePushButton">
+                      <property name="text">
+                       <string>Очистить вывод</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </widget>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="queuePage">
+       <layout class="QVBoxLayout" name="verticalLayoutQueue">
+        <item>
+         <widget class="QLabel" name="queueTaskLabel">
+          <property name="text">
+           <string>В магазине работают две кассы. Покупатели выстраиваются в две отдельные очереди: сначала заполняется очередь к первой кассе, затем — ко второй. Каждый покупатель задается своим номером и количеством покупок. Для первой кассы учет одной покупки занимает uc1 секунд, а печать чека и расчет — еще pc1 секунд. Для второй кассы эти значения — uc2 и pc2 секунд соответственно.
+Каждые k минут в очередь к первой кассе становится n новых покупателей, а ко второй — m покупателей. Первая касса была сломана и не работала первые X минут, после чего возобновила работу. Через t минут после начала работы магазина наступает обеденный перерыв.</string>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTabWidget" name="queueTabWidget">
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <widget class="QWidget" name="queueManualTab">
+           <attribute name="title">
+            <string>Вручную</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayoutQueueManual">
+            <item>
+             <layout class="QFormLayout" name="formLayoutQueueParameters">
+              <item row="0" column="0">
+               <widget class="QLabel" name="n_label">
+                <property name="text">
+                 <string>Сколько покупателей приходит в очередь к первой кассе каждые k минут:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QSpinBox" name="n_spinBox">
+                <property name="maximum">
+                 <number>1000</number>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="m_label">
+                <property name="text">
+                 <string>Сколько покупателей приходит во вторую кассу каждые k минут:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QSpinBox" name="m_spinBox">
+                <property name="maximum">
+                 <number>1000</number>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QLabel" name="k_label">
+                <property name="text">
+                 <string>Интервал в минутах, через который приходят новые покупатели:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QSpinBox" name="k_spinBox">
+                <property name="maximum">
+                 <number>1000</number>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="0">
+               <widget class="QLabel" name="X_label">
+                <property name="text">
+                 <string>Сколько минут первая касса не работала (была сломана):</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="1">
+               <widget class="QSpinBox" name="X_spinBox">
+                <property name="maximum">
+                 <number>1000</number>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="0">
+               <widget class="QLabel" name="t_label">
+                <property name="text">
+                 <string>Через сколько минут после начала работы магазина наступает обеденный перерыв:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="1">
+               <widget class="QSpinBox" name="t_spinBox">
+                <property name="maximum">
+                 <number>1000</number>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="0">
+               <widget class="QLabel" name="uc1_label">
+                <property name="text">
+                 <string>Время (секунд) на оформление одной покупки на первой кассе:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="1">
+               <widget class="QSpinBox" name="uc1_spinBox">
+                <property name="maximum">
+                 <number>1000</number>
+                </property>
+               </widget>
+              </item>
+              <item row="6" column="0">
+               <widget class="QLabel" name="pc1_label">
+                <property name="text">
+                 <string>Время (секунд) на печать чека и расчет на первой кассе:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="6" column="1">
+               <widget class="QSpinBox" name="pc1_spinBox">
+                <property name="maximum">
+                 <number>1000</number>
+                </property>
+               </widget>
+              </item>
+              <item row="7" column="0">
+               <widget class="QLabel" name="uc2_label">
+                <property name="text">
+                 <string>Время (секунд) на оформление одной покупки на второй кассе:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="7" column="1">
+               <widget class="QSpinBox" name="uc2_spinBox">
+                <property name="maximum">
+                 <number>1000</number>
+                </property>
+               </widget>
+              </item>
+              <item row="8" column="0">
+               <widget class="QLabel" name="pc2_label">
+                <property name="text">
+                 <string>Время (секунд) на печать чека и расчет на второй кассе:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="8" column="1">
+               <widget class="QSpinBox" name="pc2_spinBox">
+                <property name="maximum">
+                 <number>1000</number>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QPushButton" name="inputPushButton">
+              <property name="text">
+               <string>Ввести</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayoutQueueOutput">
+              <item>
+               <widget class="QPlainTextEdit" name="outputPlainTextEdit"/>
+              </item>
+              <item>
+               <widget class="QPushButton" name="clearPushButton">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="text">
+                 <string>Очистить вывод</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="queueFileTab">
+           <attribute name="title">
+            <string>Из файла</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayoutQueueFile">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayoutQueueFile">
+              <item>
+               <widget class="QLineEdit" name="inputFileLineEdit_queue">
+                <property name="placeholderText">
+                 <string>Введите название файла (example.txt)</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="inputFilePushButton_queue">
+                <property name="text">
+                 <string>Ввести</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QPlainTextEdit" name="outputFilePlainTextEdit_queue"/>
+            </item>
+            <item>
+             <widget class="QPushButton" name="clearFilePushButton">
+              <property name="text">
+               <string>Очистить вывод</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuStructures">
+    <property name="title">
+     <string>Структуры данных</string>
+    </property>
+    <addaction name="actionStack"/>
+    <addaction name="actionList"/>
+    <addaction name="actionQueue"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <addaction name="menuStructures"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionStack">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Стек</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+1</string>
+   </property>
+  </action>
+  <action name="actionList">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Список</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+2</string>
+   </property>
+  </action>
+  <action name="actionQueue">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Очередь</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+3</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Выход</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>О программе</string>
+   </property>
+   <property name="shortcut">
+    <string>F1</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
