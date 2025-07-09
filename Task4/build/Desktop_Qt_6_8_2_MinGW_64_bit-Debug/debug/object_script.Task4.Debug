@@ -1,0 +1,12 @@
+debug/List_functions.o
+debug/Queue_functions.o
+debug/Stack_functions.o
+debug/listtaskwindow.o
+debug/main.o
+debug/mainwindow.o
+debug/queuetaskwindow.o
+debug/stacktaskwindow.o
+debug/moc_listtaskwindow.o
+debug/moc_mainwindow.o
+debug/moc_queuetaskwindow.o
+debug/moc_stacktaskwindow.o

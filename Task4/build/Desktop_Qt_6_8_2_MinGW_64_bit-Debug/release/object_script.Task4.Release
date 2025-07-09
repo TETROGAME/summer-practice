@@ -1,0 +1,12 @@
+release/List_functions.o
+release/Queue_functions.o
+release/Stack_functions.o
+release/listtaskwindow.o
+release/main.o
+release/mainwindow.o
+release/queuetaskwindow.o
+release/stacktaskwindow.o
+release/moc_listtaskwindow.o
+release/moc_mainwindow.o
+release/moc_queuetaskwindow.o
+release/moc_stacktaskwindow.o
