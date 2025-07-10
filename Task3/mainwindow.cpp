@@ -8,6 +8,8 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     ui->statusbar->showMessage("Тимошенко Никита Михайлович 1 курс 5 группа");
 
+    this->setWindowTitle("Англо-белорусско-русский словарь");
+
     engrus_dictionary = new EngRus_translator;
     engbelrus_dictionary = new EngBelRus_translator;
 
@@ -17,11 +19,6 @@ MainWindow::MainWindow(QWidget *parent)
     ui->engbelrusTableWidget->setColumnCount(3);
     ui->engrusTableWidget->setHorizontalHeaderLabels(engrusHeaders);
     ui->engbelrusTableWidget->setHorizontalHeaderLabels(engbelrusHeaders);
-
-
-
-
-
 }
 
 MainWindow::~MainWindow()
