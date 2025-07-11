@@ -1,35 +1,39 @@
 #ifndef MYARRAY_H
 #define MYARRAY_H
 
-#include <QCoreApplication>
-#include <QRegularExpression>
-#include <QVector>
-#include <QDebug>
+#include <QString>
 #include <QTextEdit>
-#include <QMessageBox>
+#include <QVector>
 
-int isPerfect(int n);
-
-class myArray {
-private:
-    QVector<int> arr;
+class myArray
+{
 public:
     myArray();
-    myArray(QVector<int> arr);
-    ~myArray();
-    int locMax() const;
-    int locMin() const;
+    void fillFromLine(const QString &line);
 
-    void task1(QTextEdit* out) const;
+    // Задачи
+    void task1(QTextEdit *textEdit);
+    void task2(QTextEdit *textEdit);
+    void task3(QTextEdit *textEdit);
+    void task4(QTextEdit *textEdit);
 
-    void task2(QTextEdit* out) const;
+    // Методы для тестирования
+    int getElementAt(int index) const;
+    int getSize() const;
+    QVector<int> getArray() const;
+    QVector<int> getSecondArray() const; // для тестирования задачи 4
 
-    void task3(QTextEdit* out) const;
+private:
+    QVector<int> m_array;
+    QVector<int> m_secondArray; // для задачи 4
 
-    void task4(QTextEdit* out) const;
-
-    void fillFromLine(const QString& line);
+    // Вспомогательные методы
+    bool isPerfectNumber(int number) const;
+    QVector<int> findLocalMinima() const;
+    QVector<int> findLocalMaxima() const;
+    QVector<int> expandSeries() const;
+    QVector<int> getPerfectNumbers() const;
+    QVector<int> findIntersection() const;
 };
-
 
 #endif // MYARRAY_H
