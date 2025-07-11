@@ -177,7 +177,6 @@ bool GraphicsScene::saveToFile(const QString& fileName)
     }
 
     QDataStream out(&file);
-    out.setVersion(QDataStream::Qt_5_15);
 
     out << static_cast<qint32>(shapes.size());
 
