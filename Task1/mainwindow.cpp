@@ -8,6 +8,8 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+    ui->statusBar->showMessage("Тимошенко Никита Михайловч 1 курс 5 группа");
 }
 
 MainWindow::~MainWindow() {

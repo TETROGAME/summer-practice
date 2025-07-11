@@ -721,7 +721,11 @@ release/mainwindow.o: ../../mainwindow.cpp ../../mainwindow.h \
 		C:/Qt/6.8.2/mingw_64/include/QtWidgets/qtabwidget.h \
 		ui_mainwindow.h \
 		../../mynumber.h \
-		C:/Qt/6.8.2/mingw_64/include/QtCore/QString
+		C:/Qt/6.8.2/mingw_64/include/QtCore/QString \
+		C:/Qt/6.8.2/mingw_64/include/QtWidgets/QMessageBox \
+		C:/Qt/6.8.2/mingw_64/include/QtWidgets/qmessagebox.h \
+		C:/Qt/6.8.2/mingw_64/include/QtWidgets/qdialog.h \
+		C:/Qt/6.8.2/mingw_64/include/QtWidgets/qdialogbuttonbox.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\mainwindow.o ..\..\mainwindow.cpp
 
 release/mynumber.o: ../../mynumber.cpp ../../mynumber.h \

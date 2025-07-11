@@ -17,6 +17,7 @@
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTextEdit>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
@@ -40,11 +41,13 @@ public:
     QPushButton *pushButtonTask4;
     QPushButton *pushButtonInfo;
     QTextEdit *textEditOutput;
+    QStatusBar *statusBar;
 
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
+        MainWindow->resize(430, 282);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
         verticalLayout = new QVBoxLayout(centralwidget);
@@ -111,6 +114,9 @@ public:
         verticalLayout->addWidget(textEditOutput);
 
         MainWindow->setCentralWidget(centralwidget);
+        statusBar = new QStatusBar(MainWindow);
+        statusBar->setObjectName("statusBar");
+        MainWindow->setStatusBar(statusBar);
 
         retranslateUi(MainWindow);
 
